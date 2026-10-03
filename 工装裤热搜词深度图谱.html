@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>工装裤热搜词深度图谱 - 美国男装 · 本周热搜趋势 W29 2026</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #0F1117; color: #E5E7EB; font-family: -apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; padding: 32px 20px; line-height: 1.5; }
+.container { max-width: 1080px; margin: 0 auto; }
+.hero { background: linear-gradient(135deg,#1A1D29,#232A3A); border-radius: 18px; padding: 40px 34px; margin-bottom: 22px; border: 1px solid #2A2F3E; position: relative; overflow: hidden; }
+.hero::before { content:""; position:absolute; top:-60px; right:-60px; width:240px; height:240px; background: radial-gradient(circle,rgba(56,189,248,.25),transparent 70%); border-radius:50%; }
+.hero::after { content:""; position:absolute; bottom:-60px; left:-60px; width:180px; height:180px; background: radial-gradient(circle,rgba(167,139,250,.2),transparent 70%); border-radius:50%; }
+.hero h1 { font-size: 32px; font-weight: 800; background: linear-gradient(90deg,#38BDF8,#A78BFA); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 10px; position:relative; z-index:1; }
+.hero .sub { color:#94A3B8; font-size:15px; position:relative; z-index:1; }
+.hero .meta { display:flex; gap:10px; margin-top:18px; flex-wrap:wrap; position:relative; z-index:1; }
+.hero .meta span { background:#0F1117; border:1px solid #2A2F3E; color:#CBD5E1; padding:5px 12px; border-radius:8px; font-size:12px; }
+.card { background:#1A1D29; border:1px solid #2A2F3E; border-radius:16px; padding:22px 24px; margin-bottom:20px; box-shadow:0 6px 18px rgba(0,0,0,.3); }
+.card-head { display:flex; align-items:flex-start; gap:10px; margin-bottom:18px; }
+.card-icon { width:34px; height:34px; border-radius:9px; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg,#21303F,#2A2F3E); font-size:18px; flex:none; }
+.card-head h2 { font-size:18px; font-weight:700; color:#F1F5F9; }
+.card-sub { color:#64748B; font-size:12px; margin-top:3px; }
+.kw-row,.rc-row { display:flex; align-items:center; gap:12px; margin-bottom:14px; }
+.kw-info,.rc-info { width:270px; flex:none; }
+.kw-word { font-weight:600; color:#E2E8F0; display:block; font-size:14px; }
+.kw-cn,.rc-cn { color:#94A3B8; font-size:12px; margin-left:6px; }
+.kw-tag { background:#1F2937; color:#7DD3FC; font-size:11px; padding:2px 8px; border-radius:6px; margin-left:6px; }
+.kw-bar,.rc-bar { flex:1; height:10px; background:#232A3A; border-radius:6px; overflow:hidden; }
+.kw-fill { height:100%; background:linear-gradient(90deg,#38BDF8,#A78BFA); border-radius:6px; }
+.rc-fill { height:100%; background:linear-gradient(90deg,#F97316,#FBBF24); border-radius:6px; }
+.kw-pct,.rc-pct { flex:none; width:76px; text-align:right; font-weight:700; color:#FBBF24; font-size:14px; }
+.rc-name { font-weight:600; color:#E2E8F0; font-size:14px; display:block; }
+.cloud { display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:center; padding:10px 0; }
+.cw { background:#1F2937; color:#93C5FD; padding:6px 14px; border-radius:20px; font-weight:600; line-height:1.2; }
+.styles { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.style-item { background:#232A3A; border-radius:12px; padding:14px; }
+.style-name { font-weight:700; color:#F1F5F9; margin-bottom:4px; font-size:15px; }
+.style-desc { color:#94A3B8; font-size:13px; }
+.func { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+.fw { background:#1F2937; color:#FBBF24; padding:4px 10px; border-radius:6px; font-size:12px; font-family:monospace; }
+.dt-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.dt-item { background:#232A3A; border-radius:12px; padding:14px; }
+.dt-trend { font-weight:700; color:#F1F5F9; margin-bottom:4px; font-size:15px; }
+.dt-desc { color:#94A3B8; font-size:13px; margin-bottom:8px; }
+.dt-src { display:inline-block; background:#1F2937; color:#7DD3FC; font-size:11px; padding:2px 8px; border-radius:6px; }
+.ft-row { display:flex; align-items:center; gap:12px; padding:10px 0; border-bottom:1px solid #232A3A; }
+.ft-row:last-child { border-bottom:none; }
+.ft-name { width:140px; font-weight:600; color:#E2E8F0; font-size:14px; flex:none; }
+.ft-freq { background:#1F2937; color:#FBBF24; font-size:12px; padding:2px 10px; border-radius:6px; flex:none; }
+.ft-note { color:#94A3B8; font-size:13px; }
+.au-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.au-item { background:#1F2937; border-radius:12px; padding:14px; }
+.au-group { font-weight:700; color:#F1F5F9; margin-bottom:6px; font-size:14px; }
+.au-meta { color:#94A3B8; font-size:13px; margin-bottom:3px; }
+.au-meta b { color:#7DD3FC; font-weight:600; }
+.color-item { margin-bottom:10px; }
+.color-bar { height:12px; background:#232A3A; border-radius:6px; overflow:hidden; margin-bottom:4px; }
+.color-fill { height:100%; background:linear-gradient(90deg,#334155,#64748B); border-radius:6px; }
+.color-label { font-size:13px; color:#CBD5E1; }
+.color-note { color:#64748B; font-size:12px; margin-left:6px; }
+.price-stats { display:grid; grid-template-columns:repeat(6,1fr); gap:10px; margin-bottom:14px; }
+.ps { background:#232A3A; border-radius:10px; padding:12px; text-align:center; }
+.ps label { display:block; color:#94A3B8; font-size:12px; margin-bottom:4px; }
+.ps b { font-size:20px; color:#E2E8F0; font-weight:700; }
+.ps.hl { background:#2A2F3E; border:1px solid #38BDF8; }
+.ps.hl b { color:#38BDF8; }
+.price-band { background:#1F2937; border-radius:10px; padding:12px; color:#CBD5E1; font-size:13px; margin-bottom:14px; }
+.price-band b { color:#FBBF24; }
+.band-box { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-bottom:14px; }
+.bd-bar { height:12px; background:#232A3A; border-radius:6px; overflow:hidden; margin-bottom:4px; }
+.bd-fill { height:100%; background:linear-gradient(90deg,#38BDF8,#A78BFA); border-radius:6px; }
+.bd-label { font-size:12px; color:#CBD5E1; text-align:center; }
+.top-box { background:#0F1117; border-radius:10px; padding:14px; }
+.top-title { color:#94A3B8; font-size:12px; margin-bottom:8px; }
+.ts-item { display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid #1F2937; font-size:13px; }
+.ts-item:last-child { border-bottom:none; }
+.ts-name { color:#CBD5E1; } .ts-price { color:#FBBF24; font-weight:700; }
+.sr-item { background:#232A3A; border-radius:12px; padding:14px; margin-bottom:10px; }
+.sr-store { font-weight:700; color:#F1F5F9; margin-bottom:8px; font-size:15px; }
+.sr-grid { display:flex; gap:8px; margin-bottom:4px; font-size:13px; }
+.sr-grid span { color:#64748B; flex:none; width:40px; }
+.sr-grid b { color:#CBD5E1; flex:1; font-weight:600; }
+.sr-key { color:#7DD3FC; font-size:12px; margin-top:6px; }
+.sf-item { display:flex; gap:10px; padding:10px 0; border-bottom:1px solid #232A3A; }
+.sf-item:last-child { border-bottom:none; }
+.sf-icon { color:#34D399; font-weight:700; flex:none; }
+.sf-name { font-weight:600; color:#E2E8F0; font-size:14px; }
+.sf-impact { color:#FBBF24; font-size:12px; font-weight:600; }
+.sf-desc { color:#94A3B8; font-size:13px; }
+.op-item { display:flex; align-items:center; gap:10px; background:#1F2937; border-radius:10px; padding:10px 14px; margin-bottom:8px; }
+.op-word { font-weight:700; color:#7DD3FC; font-family:monospace; width:120px; }
+.op-index { background:#0F1117; color:#FBBF24; font-size:12px; padding:2px 8px; border-radius:6px; flex:none; }
+.op-note { color:#94A3B8; font-size:13px; }
+.missing-note { color:#64748B; font-size:12px; margin-top:10px; }
+.hol { display:inline-block; background:#2A1C3A; color:#C4B5FD; padding:6px 14px; border-radius:20px; font-size:13px; margin:4px; border:1px solid #3A2C4A; }
+.st-item { background:#1F2937; border-radius:10px; padding:12px; margin-bottom:8px; color:#CBD5E1; font-size:13px; }
+.ins { background:#0F1117; border-radius:10px; padding:16px; }
+.ins-item { color:#CBD5E1; font-size:13px; margin-bottom:10px; padding-left:4px; }
+.ins-item:last-child { margin-bottom:0; }
+.footer { text-align:center; color:#64748B; font-size:12px; padding:18px 0 8px; }
+@media (max-width:640px) { .kw-info,.rc-info { width:160px; } .price-stats { grid-template-columns:repeat(3,1fr); } .styles,.dt-grid,.au-grid { grid-template-columns:1fr; } .band-box { grid-template-columns:repeat(2,1fr); } }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="hero">
+    <h1>工装裤热搜词深度图谱</h1>
+    <div class="sub">美国男装 · 本周热搜趋势 W29 2026</div>
+    <div class="meta">
+      <span>数据日期 2026-07-19</span>
+      <span>US Men's Apparel</span>
+      <span>数据来源：男装品类知识库（47,000+条商品 + 71条本周热搜趋势 + 蓝海词 + 42家头部店铺参考）</span>
+    </div>
+  </div>
+
+  <section class="card">
+  <div class="card-head"><span class="card-icon">📈</span><div><h2>本周热搜关键词（工装裤相关）</h2><div class="card-sub">W29 2026 · 美国男装 · 含周涨幅</div></div></div>
+  <div><div class="kw-row">
+  <div class="kw-info"><span class="kw-word">tactical pants for men</span><span class="kw-cn">男士战术裤</span><span class="kw-tag">场景</span></div>
+  <div class="kw-bar"><div class="kw-fill" style="width:4.3%"></div></div>
+  <span class="kw-pct">+17.21%</span>
+</div><div class="kw-row">
+  <div class="kw-info"><span class="kw-word">joggers for men</span><span class="kw-cn">男士慢跑裤</span><span class="kw-tag">品类</span></div>
+  <div class="kw-bar"><div class="kw-fill" style="width:13.1%"></div></div>
+  <span class="kw-pct">+52.40%</span>
+</div><div class="kw-row">
+  <div class="kw-info"><span class="kw-word">baggy sweatpants</span><span class="kw-cn">宽松运动裤</span><span class="kw-tag">风格</span></div>
+  <div class="kw-bar"><div class="kw-fill" style="width:97.7%"></div></div>
+  <span class="kw-pct">+390.63%</span>
+</div><div class="kw-row">
+  <div class="kw-info"><span class="kw-word">linen pants men</span><span class="kw-cn">男士亚麻长裤</span><span class="kw-tag">材质颜色</span></div>
+  <div class="kw-bar"><div class="kw-fill" style="width:6.0%"></div></div>
+  <span class="kw-pct">+23.81%</span>
+</div><div class="kw-row">
+  <div class="kw-info"><span class="kw-word">baggy jeans men</span><span class="kw-cn">男士宽松牛仔裤</span><span class="kw-tag">风格</span></div>
+  <div class="kw-bar"><div class="kw-fill" style="width:2.1%"></div></div>
+  <span class="kw-pct">+8.25%</span>
+</div><div class="kw-row">
+  <div class="kw-info"><span class="kw-word">pants</span><span class="kw-cn">长裤</span><span class="kw-tag">品类</span></div>
+  <div class="kw-bar"><div class="kw-fill" style="width:0.6%"></div></div>
+  <span class="kw-pct">+2.29%</span>
+</div></div>
+</section>
+  <section class="card">
+  <div class="card-head"><span class="card-icon">🔥</span><div><h2>上涨关联品类</h2><div class="card-sub">涨跌幅百分比</div></div></div>
+  <div><div class="rc-row">
+  <div class="rc-info"><span class="rc-name">tactical（战术）</span><span class="rc-cn">战术裤/战术背心/生存装备</span></div>
+  <div class="rc-bar"><div class="rc-fill" style="width:25.0%"></div></div>
+  <span class="rc-pct">+100.00%</span>
+</div><div class="rc-row">
+  <div class="rc-info"><span class="rc-name">y2k（Y2K街头）</span><span class="rc-cn">Y2K街头风，工装裤可融合</span></div>
+  <div class="rc-bar"><div class="rc-fill" style="width:48.4%"></div></div>
+  <span class="rc-pct">+193.75%</span>
+</div><div class="rc-row">
+  <div class="rc-info"><span class="rc-name">overalls（背带裤）</span><span class="rc-cn">工装关联单品</span></div>
+  <div class="rc-bar"><div class="rc-fill" style="width:14.8%"></div></div>
+  <span class="rc-pct">+59.15%</span>
+</div><div class="rc-row">
+  <div class="rc-info"><span class="rc-name">baggy_jeans（宽松）</span><span class="rc-cn">宽松版型持续趋势</span></div>
+  <div class="rc-bar"><div class="rc-fill" style="width:9.3%"></div></div>
+  <span class="rc-pct">+37.26%</span>
+</div><div class="rc-row">
+  <div class="rc-info"><span class="rc-name">rock_vintage（复古摇滚）</span><span class="rc-cn">亚文化风格可延伸</span></div>
+  <div class="rc-bar"><div class="rc-fill" style="width:24.5%"></div></div>
+  <span class="rc-pct">+98.00%</span>
+</div></div>
+</section>
+  <section class="card">
+  <div class="card-head"><span class="card-icon">💬</span><div><h2>长裤热销标题高频词云</h2><div class="card-sub">1000条新款长裤标题词频</div></div></div>
+  <div class="cloud"><span class="cw" style="font-size:45.9px">pcs</span><span class="cw" style="font-size:42.6px">men</span><span class="cw" style="font-size:32.7px">for</span><span class="cw" style="font-size:28.3px">pant</span><span class="cw" style="font-size:23.9px">pants</span><span class="cw" style="font-size:22.8px">obm</span><span class="cw" style="font-size:19.5px">cargo</span><span class="cw" style="font-size:19.5px">molle</span><span class="cw" style="font-size:19.5px">casual</span><span class="cw" style="font-size:19.5px">gym</span><span class="cw" style="font-size:19.5px">winter</span><span class="cw" style="font-size:18.4px">construction</span><span class="cw" style="font-size:18.4px">trousers</span><span class="cw" style="font-size:18.4px">with</span></div>
+</section>
+  <section class="card">
+  <div class="card-head"><span class="card-icon">👖</span><div><h2>工装裤核心风格</h2><div class="card-sub">70%休闲裤头部店铺主推工装</div></div></div>
+  <div class="styles"><div class="style-item"><div class="style-name">工装裤 Cargo Pants</div><div class="style-desc">多口袋、军绿/卡其，手工装核心，70%头部店铺主推</div></div><div class="style-item"><div class="style-name">束脚裤 Jogger Pants</div><div class="style-desc">运动休闲，弹性束脚，多口袋延伸</div></div><div class="style-item"><div class="style-name">宽松裤 Loose Fit</div><div class="style-desc">街头风 oversize，融合baggy趋势</div></div><div class="style-item"><div class="style-name">战术裤 Tactical Pants</div><div class="style-desc">多口袋+molle织带，户外强转化</div></div><div class="style-item"><div class="style-name">直筒休闲裤 Straight</div><div class="style-desc">百搭基础，走量安全款</div></div><div class="style-item"><div class="style-name">哈伦裤 Harem Pants</div><div class="style-desc">个性休闲，差异化补充</div></div></div>
+</section>
+  <section class="card">
+  <div class="card-head"><span class="card-icon">🧩</span><div><h2>推荐卖点/功能词</h2></div></div>
+  <div class="func"><span class="fw">multi-pocket</span><span class="fw">cargo</span><span class="fw">molle</span><span class="fw">tactical</span><span class="fw">utility</span><span class="fw">streetwear</span><span class="fw">y2k</span><span class="fw">baggy</span><span class="fw">loose fit</span><span class="fw">stretch</span><span class="fw">outdoor</span><span class="fw">construction</span><span class="fw">drawstring</span><span class="fw">5-pocket</span></div>
+</section>
+  <section class="card">
+  <div class="card-head"><span class="card-icon">🎯</span><div><h2>款式/设计趋势</h2></div></div>
+  <div class="dt-grid"><div class="dt-item"><div class="dt-trend">实用工装风</div><div class="dt-desc">口袋多 · 非常耐穿 · 多视角功能照</div><span class="dt-src">牛仔搜索趋势</span></div><div class="dt-item"><div class="dt-trend">战术服 Tactical</div><div class="dt-desc">molle织带 · 多口袋 · 强转化小众</div><span class="dt-src">外套夹克样式趋势</span></div><div class="dt-item"><div class="dt-trend">机能户外 Outdoor</div><div class="dt-desc">实用口袋 · 户外场景 · 透气面料</div><span class="dt-src">外套夹克样式趋势</span></div><div class="dt-item"><div class="dt-trend">工装多口袋 Utility</div><div class="dt-desc">宽松版型 · 多口袋 · 层次感</div><span class="dt-src">外套夹克样式趋势</span></div><div class="dt-item"><div class="dt-trend">Y2K街头</div><div class="dt-desc">宽裤脚 · 堆叠 · 复古做旧</div><span class="dt-src">本周热搜 +193.75%</span></div><div class="dt-item"><div class="dt-trend">复古摇滚 Rock</div><div class="dt-desc">亚文化 · 粗犷 · 工艺稀缺感</div><span class="dt-src">本周热搜 +98%</span></div></div>
+</section>
+  <section class="card">
+  <div class="card-head"><span class="card-icon">⚙️</span><div><h2>功能属性趋势（关键决策因素）</h2></div></div>
+  <div><div class="ft-row"><div class="ft-name">多口袋 Pockets</div><span class="ft-freq">高</span><div class="ft-note">with pocket/多口袋是工装裤核心卖点</div></div><div class="ft-row"><div class="ft-name">保暖 Warmth</div><span class="ft-freq">极高</span><div class="ft-note">winter/for cold weather 秋冬叠加</div></div><div class="ft-row"><div class="ft-name">季节 Seasonal</div><span class="ft-freq">高</span><div class="ft-note">winter/fall/autumn 换季铺款</div></div><div class="ft-row"><div class="ft-name">弹力 Stretch</div><span class="ft-freq">中</span><div class="ft-note">stretch 舒适款受欢迎</div></div><div class="ft-row"><div class="ft-name">科技功能 Techwear</div><span class="ft-freq">低（蓝海）</span><div class="ft-note">techwear/reflective 差异化竞争</div></div></div>
+</section>
+  <section class="card">
+  <div class="card-head"><span class="card-icon">👥</span><div><h2>人群与场景适配</h2></div></div>
+  <div class="au-grid"><div class="au-item">
+  <div class="au-group">户外爱好者 / 蓝领时尚</div>
+  <div class="au-meta"><b>钩子：</b>口袋多 · 非常耐穿 · 实用工装</div>
+  <div class="au-meta"><b>主图：</b>多视角侧面功能照</div>
+</div><div class="au-item">
+  <div class="au-group">Z世代 / 潮流玩家</div>
+  <div class="au-meta"><b>钩子：</b>我穿这件很酷 · 极致街头</div>
+  <div class="au-meta"><b>主图：</b>广角低拍全身照</div>
+</div><div class="au-item">
+  <div class="au-group">通勤青年 / 大学生</div>
+  <div class="au-meta"><b>钩子：</b>这件很百搭 · 干净高街</div>
+  <div class="au-meta"><b>主图：</b>纯色背景全身照</div>
+</div><div class="au-item">
+  <div class="au-group">亚文化 / 摇滚爱好者</div>
+  <div class="au-meta"><b>钩子：</b>这个工艺很稀缺 · 复古废土</div>
+  <div class="au-meta"><b>主图：</b>粗犷室外特写照</div>
+</div></div>
+</section>
+  <section class="card">
+  <div class="card-head"><span class="card-icon">🎨</span><div><h2>主力颜色策略</h2></div></div>
+  <div><div class="color-item"><div class="color-bar"><div class="color-fill" style="width:40%"></div></div>
+  <div class="color-label">黑色 · 40% <span class="color-note">百搭显瘦，绝对主力</span></div></div><div class="color-item"><div class="color-bar"><div class="color-fill" style="width:20%"></div></div>
+  <div class="color-label">军绿 · 20% <span class="color-note">工装传统色</span></div></div><div class="color-item"><div class="color-bar"><div class="color-fill" style="width:20%"></div></div>
+  <div class="color-label">灰色 · 20% <span class="color-note">百搭中性</span></div></div><div class="color-item"><div class="color-bar"><div class="color-fill" style="width:15%"></div></div>
+  <div class="color-label">卡其 · 15% <span class="color-note">工装经典</span></div></div><div class="color-item"><div class="color-bar"><div class="color-fill" style="width:5%"></div></div>
+  <div class="color-label">其他 · 5% <span class="color-note">迷彩/撞色差异化</span></div></div></div><div class="color-note" style="margin-top:8px">黑色40%为绝对主力，军绿/卡其为工装传统色，迷彩/撞色可做差异化</div>
+</section>
+  <section class="card">
+  <div class="card-head"><span class="card-icon">💰</span><div><h2>价格带深度分析</h2></div></div>
+  <div class="price-stats">
+  <div class="ps"><label>最低</label><b>$4.71</b></div>
+  <div class="ps"><label>Q1</label><b>$12.89</b></div>
+  <div class="ps hl"><label>中位</label><b>$17.54</b></div>
+  <div class="ps"><label>Q3</label><b>$26.1</b></div>
+  <div class="ps"><label>均价</label><b>$20.54</b></div>
+  <div class="ps"><label>最高</label><b>$73.99</b></div>
+</div>
+<div class="price-band">长裤样本 1000 条 · 主力价格带 <b>$15-25</b>（占50%）· 头部店铺中位 $19.5，区间 $12.58-$34.87</div>
+<div class="band-box"><div class="bd-item"><div class="bd-bar"><div class="bd-fill" style="width:20%"></div></div><div class="bd-label">$15以下 · 20%</div></div><div class="bd-item"><div class="bd-bar"><div class="bd-fill" style="width:50%"></div></div><div class="bd-label">$15-25 · 50%</div></div><div class="bd-item"><div class="bd-bar"><div class="bd-fill" style="width:30%"></div></div><div class="bd-label">$25-35 · 30%</div></div><div class="bd-item"><div class="bd-bar"><div class="bd-fill" style="width:0%"></div></div><div class="bd-label">$35以上 · 0%</div></div></div>
+<div class="top-box"><div class="top-title">头部店铺核心爆款</div><div class="ts-item"><span class="ts-name">Cargo Pants</span><span class="ts-price">$13.29</span></div><div class="ts-item"><span class="ts-name">Cargo Loose Pants</span><span class="ts-price">$19.41</span></div><div class="ts-item"><span class="ts-name">Casual Pants</span><span class="ts-price">$18.4</span></div></div>
+</section>
+  <section class="card">
+  <div class="card-head"><span class="card-icon">🏪</span><div><h2>头部店铺对标（休闲裤品类）</h2></div></div>
+  <div><div class="sr-item">
+  <div class="sr-store">BEAUTIFU PANTS（休闲裤区）</div>
+  <div class="sr-grid"><span>款式</span><b>30+款</b><span>价格</span><b>$12.58-$29.50</b></div>
+  <div class="sr-grid"><span>爆款</span><b>Cargo Pants $13.29</b><span>风格</span><b>工装/运动休闲套装</b></div>
+  <div class="sr-key">策略：与牛仔共店，Lightning+Clearance双轨</div>
+</div><div class="sr-item">
+  <div class="sr-store">SYX TE（休闲裤区）</div>
+  <div class="sr-grid"><span>款式</span><b>20+款</b><span>价格</span><b>$19.41-$34.87</b></div>
+  <div class="sr-grid"><span>爆款</span><b>Cargo Loose Pants $19.41</b><span>风格</span><b>工装/宽松/街头</b></div>
+  <div class="sr-key">策略：与牛仔共店，100%模特图</div>
+</div><div class="sr-item">
+  <div class="sr-store">Nixeci（休闲裤区）</div>
+  <div class="sr-grid"><span>款式</span><b>15+款</b><span>价格</span><b>$12.36-$26.32</b></div>
+  <div class="sr-grid"><span>爆款</span><b>Casual Pants $18.40</b><span>风格</span><b>基础休闲/直筒</b></div>
+  <div class="sr-key">策略：与T恤/牛仔共店，Summer Sale</div>
+</div></div>
+</section>
+  <section class="card">
+  <div class="card-head"><span class="card-icon">⭐</span><div><h2>跨品类共性成功因素</h2></div></div>
+  <div><div class="sf-item"><span class="sf-icon">✔</span><div><div class="sf-name">Local Warehouse 标签 <span class="sf-impact">[高]</span></div><div class="sf-desc">全品类100%覆盖，头部店铺标配</div></div></div><div class="sf-item"><span class="sf-icon">✔</span><div><div class="sf-name">限时促销 Lightning Deal <span class="sf-impact">[高]</span></div><div class="sf-desc">80%+店铺使用，制造紧迫感</div></div></div><div class="sf-item"><span class="sf-icon">✔</span><div><div class="sf-name">多件装 Bundle <span class="sf-impact">[高]</span></div><div class="sf-desc">牛仔裤2-5pack、POLO 4-6pcs，客单价+30-50%</div></div></div><div class="sf-item"><span class="sf-icon">✔</span><div><div class="sf-name">模特上身图为主 <span class="sf-impact">[中]</span></div><div class="sf-desc">60-90%店铺使用，比平铺转化高</div></div></div><div class="sf-item"><span class="sf-icon">✔</span><div><div class="sf-name">价格竞争力 <span class="sf-impact">[高]</span></div><div class="sf-desc">低于市场均价20-30%</div></div></div><div class="sf-item"><span class="sf-icon">✔</span><div><div class="sf-name">高销量展示 <span class="sf-impact">[高]</span></div><div class="sf-desc">展示1K-200K+销量增强信任</div></div></div></div>
+</section>
+  <section class="card">
+  <div class="card-head"><span class="card-icon">🌊</span><div><h2>蓝海/机会词</h2></div></div>
+  <div><div class="op-item"><span class="op-word">techwear</span><span class="op-index">蓝海</span><span class="op-note">竞争少，可做差异化</span></div><div class="op-item"><span class="op-word">reflective</span><span class="op-index">蓝海</span><span class="op-note">机能工装元素</span></div><div class="op-item"><span class="op-word">baggy pants</span><span class="op-index">强涨</span><span class="op-note">宽松趋势 +37%</span></div></div><div class="missing-note">说明：本周蓝海词侧重卫衣帽衫品类，工装裤可借鉴的蓝海维度为 techwear/反光/宽松 等机能与版型方向。</div>
+</section>
+  <section class="card">
+  <div class="card-head"><span class="card-icon">🎉</span><div><h2>节日/场景热搜词</h2><div class="card-sub">临近节日（当前10-12月）：万圣节/圣诞节</div></div></div>
+  <div><span class="hol">Halloween 万圣节（10/31）</span><span class="hol">Christmas 圣诞节（12/25）</span><span class="hol">Football 足球场景</span><span class="hol">初秋过渡款（亚麻/长袖）</span><span class="hol">户外徒步 Hiking</span><span class="hol">街头滑板 Skateboarding</span></div>
+</section>
+  <section class="card">
+  <div class="card-head"><span class="card-icon">📃</span><div><h2>参考热销标题</h2></div></div>
+  <div><div class="st-item">男士战术工装裤，多口袋 · 聚酯氨纶混纺 · 可机洗 · 弹力面料 · 橄榄绿 · 户外休闲</div><div class="st-item">男士纯色运动裤 · 抽绳 · 多口袋工装 · 加大码 · 宽松版型 · 日常居家</div><div class="st-item">男士工装多口袋长裤 · molle织带 · 耐穿 · 户外 · 休闲</div></div>
+</section>
+  <section class="card">
+  <div class="card-head"><span class="card-icon">🧠</span><div><h2>核心洞察</h2></div></div>
+  <div class="ins"><div class="ins-item">• 战术裤本周热搜+17.21%，多口袋+molle织带为强转化卖点，户外场景强</div><div class="ins-item">• 宽松版型暴涨：baggy sweatpants +390.63%，工装裤可融合 Loose Fit / Y2K 街头风</div><div class="ins-item">• 黑色为绝对主力色（占40%），军绿/卡其为工装传统色，迷彩/撞色可差异化</div><div class="ins-item">• 主力价格带$15-25占50%，长裤整体均价$20.54中位$17.54，价格竞争力是关键</div><div class="ins-item">• 头部店铺70%主推工装裤，多件装Bundle+Local Warehouse是共性成功因素</div><div class="ins-item">• 工装裤可延伸战术/机能/户外/街头四方向，techwear/反光为蓝海差异化位</div></div>
+</section>
+
+  <div class="footer">基于男装选品知识库（47,000+条商品 + 本周热搜趋势71条 + 蓝海词 + 42家头部店铺参考） · 单文件可视化海报</div>
+</div>
+<script>
+var D = {"title": "工装裤热搜词深度图谱", "subtitle": "美国男装 · 本周热搜趋势 W29 2026", "update_date": "2026-07-19", "market": "US Men's Apparel", "source_note": "数据来源：男装品类知识库（47,000+条商品 + 71条本周热搜趋势 + 蓝海词 + 42家头部店铺参考）", "keywords": [{"word": "tactical pants for men", "cn": "男士战术裤", "direction": "场景", "change": 17.21}, {"word": "joggers for men", "cn": "男士慢跑裤", "direction": "品类", "change": 52.4}, {"word": "baggy sweatpants", "cn": "宽松运动裤", "direction": "风格", "change": 390.63}, {"word": "linen pants men", "cn": "男士亚麻长裤", "direction": "材质颜色", "change": 23.81}, {"word": "baggy jeans men", "cn": "男士宽松牛仔裤", "direction": "风格", "change": 8.25}, {"word": "pants", "cn": "长裤", "direction": "品类", "change": 2.29}], "rising_categories": [{"name": "tactical（战术）", "cn": "战术裤/战术背心/生存装备", "change": 100.0}, {"name": "y2k（Y2K街头）", "cn": "Y2K街头风，工装裤可融合", "change": 193.75}, {"name": "overalls（背带裤）", "cn": "工装关联单品", "change": 59.15}, {"name": "baggy_jeans（宽松）", "cn": "宽松版型持续趋势", "change": 37.26}, {"name": "rock_vintage（复古摇滚）", "cn": "亚文化风格可延伸", "change": 98.0}], "category_keywords": [{"word": "pcs", "freq": 29}, {"word": "men", "freq": 26}, {"word": "for", "freq": 17}, {"word": "pant", "freq": 13}, {"word": "pants", "freq": 9}, {"word": "obm", "freq": 8}, {"word": "cargo", "freq": 5}, {"word": "molle", "freq": 5}, {"word": "casual", "freq": 5}, {"word": "gym", "freq": 5}, {"word": "winter", "freq": 5}, {"word": "construction", "freq": 4}, {"word": "trousers", "freq": 4}, {"word": "with", "freq": 4}], "core_styles": [{"style": "工装裤 Cargo Pants", "desc": "多口袋、军绿/卡其，手工装核心，70%头部店铺主推"}, {"style": "束脚裤 Jogger Pants", "desc": "运动休闲，弹性束脚，多口袋延伸"}, {"style": "宽松裤 Loose Fit", "desc": "街头风 oversize，融合baggy趋势"}, {"style": "战术裤 Tactical Pants", "desc": "多口袋+molle织带，户外强转化"}, {"style": "直筒休闲裤 Straight", "desc": "百搭基础，走量安全款"}, {"style": "哈伦裤 Harem Pants", "desc": "个性休闲，差异化补充"}], "function_words": ["multi-pocket", "cargo", "molle", "tactical", "utility", "streetwear", "y2k", "baggy", "loose fit", "stretch", "outdoor", "construction", "drawstring", "5-pocket"], "design_trends": [{"trend": "实用工装风", "desc": "口袋多 · 非常耐穿 · 多视角功能照", "src": "牛仔搜索趋势"}, {"trend": "战术服 Tactical", "desc": "molle织带 · 多口袋 · 强转化小众", "src": "外套夹克样式趋势"}, {"trend": "机能户外 Outdoor", "desc": "实用口袋 · 户外场景 · 透气面料", "src": "外套夹克样式趋势"}, {"trend": "工装多口袋 Utility", "desc": "宽松版型 · 多口袋 · 层次感", "src": "外套夹克样式趋势"}, {"trend": "Y2K街头", "desc": "宽裤脚 · 堆叠 · 复古做旧", "src": "本周热搜 +193.75%"}, {"trend": "复古摇滚 Rock", "desc": "亚文化 · 粗犷 · 工艺稀缺感", "src": "本周热搜 +98%"}], "feature_trends": [{"feature": "多口袋 Pockets", "freq": "高", "note": "with pocket/多口袋是工装裤核心卖点"}, {"feature": "保暖 Warmth", "freq": "极高", "note": "winter/for cold weather 秋冬叠加"}, {"feature": "季节 Seasonal", "freq": "高", "note": "winter/fall/autumn 换季铺款"}, {"feature": "弹力 Stretch", "freq": "中", "note": "stretch 舒适款受欢迎"}, {"feature": "科技功能 Techwear", "freq": "低（蓝海）", "note": "techwear/reflective 差异化竞争"}], "audience": [{"group": "户外爱好者 / 蓝领时尚", "hook": "口袋多 · 非常耐穿 · 实用工装", "img": "多视角侧面功能照"}, {"group": "Z世代 / 潮流玩家", "hook": "我穿这件很酷 · 极致街头", "img": "广角低拍全身照"}, {"group": "通勤青年 / 大学生", "hook": "这件很百搭 · 干净高街", "img": "纯色背景全身照"}, {"group": "亚文化 / 摇滚爱好者", "hook": "这个工艺很稀缺 · 复古废土", "img": "粗犷室外特写照"}], "colors": [{"color": "黑色", "pct": 40, "note": "百搭显瘦，绝对主力"}, {"color": "军绿", "pct": 20, "note": "工装传统色"}, {"color": "灰色", "pct": 20, "note": "百搭中性"}, {"color": "卡其", "pct": 15, "note": "工装经典"}, {"color": "其他", "pct": 5, "note": "迷彩/撞色差异化"}], "color_insight": "黑色40%为绝对主力，军绿/卡其为工装传统色，迷彩/撞色可做差异化", "price": {"min": 4.71, "q1": 12.89, "median": 17.54, "q3": 26.1, "max": 73.99, "mean": 20.54, "count": 1000, "band": "$15-25", "band_dist": [{"label": "$15以下", "pct": 20}, {"label": "$15-25", "pct": 50}, {"label": "$25-35", "pct": 30}, {"label": "$35以上", "pct": 0}], "store_median": 19.5, "store_range": "$12.58-$34.87", "top_sellers": [{"store": "Cargo Pants", "price": 13.29}, {"store": "Cargo Loose Pants", "price": 19.41}, {"store": "Casual Pants", "price": 18.4}]}, "store_refs": [{"store": "BEAUTIFU PANTS（休闲裤区）", "count": "30+款", "price": "$12.58-$29.50", "top": "Cargo Pants $13.29", "style": "工装/运动休闲套装", "key": "与牛仔共店，Lightning+Clearance双轨"}, {"store": "SYX TE（休闲裤区）", "count": "20+款", "price": "$19.41-$34.87", "top": "Cargo Loose Pants $19.41", "style": "工装/宽松/街头", "key": "与牛仔共店，100%模特图"}, {"store": "Nixeci（休闲裤区）", "count": "15+款", "price": "$12.36-$26.32", "top": "Casual Pants $18.40", "style": "基础休闲/直筒", "key": "与T恤/牛仔共店，Summer Sale"}], "success_factors": [{"factor": "Local Warehouse 标签", "desc": "全品类100%覆盖，头部店铺标配", "impact": "高"}, {"factor": "限时促销 Lightning Deal", "desc": "80%+店铺使用，制造紧迫感", "impact": "高"}, {"factor": "多件装 Bundle", "desc": "牛仔裤2-5pack、POLO 4-6pcs，客单价+30-50%", "impact": "高"}, {"factor": "模特上身图为主", "desc": "60-90%店铺使用，比平铺转化高", "impact": "中"}, {"factor": "价格竞争力", "desc": "低于市场均价20-30%", "impact": "高"}, {"factor": "高销量展示", "desc": "展示1K-200K+销量增强信任", "impact": "高"}], "opportunity_words": [{"word": "techwear", "cn": "科技服/机能风", "index": "蓝海", "note": "竞争少，可做差异化"}, {"word": "reflective", "cn": "反光", "index": "蓝海", "note": "机能工装元素"}, {"word": "baggy pants", "cn": "宽松长裤", "index": "强涨", "note": "宽松趋势 +37%"}], "missing_blue_ocean": "说明：本周蓝海词侧重卫衣帽衫品类，工装裤可借鉴的蓝海维度为 techwear/反光/宽松 等机能与版型方向。", "holiday_words": ["Halloween 万圣节（10/31）", "Christmas 圣诞节（12/25）", "Football 足球场景", "初秋过渡款（亚麻/长袖）", "户外徒步 Hiking", "街头滑板 Skateboarding"], "sample_titles": ["男士战术工装裤，多口袋 · 聚酯氨纶混纺 · 可机洗 · 弹力面料 · 橄榄绿 · 户外休闲", "男士纯色运动裤 · 抽绳 · 多口袋工装 · 加大码 · 宽松版型 · 日常居家", "男士工装多口袋长裤 · molle织带 · 耐穿 · 户外 · 休闲"], "insights": ["战术裤本周热搜+17.21%，多口袋+molle织带为强转化卖点，户外场景强", "宽松版型暴涨：baggy sweatpants +390.63%，工装裤可融合 Loose Fit / Y2K 街头风", "黑色为绝对主力色（占40%），军绿/卡其为工装传统色，迷彩/撞色可差异化", "主力价格带$15-25占50%，长裤整体均价$20.54中位$17.54，价格竞争力是关键", "头部店铺70%主推工装裤，多件装Bundle+Local Warehouse是共性成功因素", "工装裤可延伸战术/机能/户外/街头四方向，techwear/反光为蓝海差异化位"]};
+</script>
+</body>
+</html>
